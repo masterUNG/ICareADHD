@@ -9,14 +9,16 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 
 public class DatabaseUser extends SQLiteOpenHelper {
-    private static final String DB_NAME = "MyUser";
+    public static final String DB_NAME = "MyUser";
     private static final int DB_VERSION = 1;
     public static final String TABLE_NAME = "User";
+    public static final String TABLE_Language = "languageTABLE";
     public static final String COL_TYPE = "type";
     public static final String COL_FNAME = "first_name";
     public static final String COL_LNAME = "last_name";
     public static final String COL_EMAIL = "email";
     public static final String COL_PASS = "password";
+    public static final String COL_Language = "Language";
 
     private static  final String create_language_table = "create table languageTABLE (" +
             "_id integer primary key," +

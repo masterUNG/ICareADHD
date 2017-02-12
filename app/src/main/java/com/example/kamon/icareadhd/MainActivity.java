@@ -21,12 +21,13 @@ public class MainActivity extends AppCompatActivity {
     private String[] emailStrings , passStrings, loginStrings,createStrings;
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Check Language
+        checkLanguage();
 
         //set up
         myConstant = new MyConstant();
@@ -48,8 +49,6 @@ public class MainActivity extends AppCompatActivity {
         Password.setText(passStrings[intLanguage]);
         button.setText(createStrings[intLanguage]);
         button2.setText(loginStrings[intLanguage]);
-
-
 
 
         button2.setOnClickListener(new View.OnClickListener() {
@@ -77,4 +76,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void checkLanguage() {
+
+        SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(DatabaseUser.DB_NAME,
+                MODE_PRIVATE, null);
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM languageTABLE", null);
+        cursor.moveToFirst();
+
+        if (cursor.getCount() == 0) {
+            startActivity(new Intent(MainActivity.this, ChooseLanguage.class));
+        }
+
+    }   // checkLanguage
 }
