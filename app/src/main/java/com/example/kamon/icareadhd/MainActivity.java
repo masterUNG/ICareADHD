@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     private String[] emailStrings , passStrings, loginStrings,createStrings;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
