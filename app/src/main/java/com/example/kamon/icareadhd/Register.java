@@ -55,6 +55,7 @@ public class Register extends Activity {
         final EditText editPass = (EditText) findViewById(R.id.edit_pass);
         final TextView creating = (TextView) findViewById(R.id.Register_head);
 
+
         //set up
         myConstant = new MyConstant();
         userStrings = myConstant.getUserTypeButtonRegister();
