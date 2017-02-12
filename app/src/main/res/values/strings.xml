@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ICareADHD</string>
+    <string name="app_fname">Intelligence Caring System for Attention Deficit Hyperactivity Disorder</string>
+    <string name="textview_addreward">Add reward</string>
+    <string name="textview_listoftask">List of tasks</string>
+    <string name="title_activity_example_sqsl">ExampleSQSL</string>
+    <string name="textview_listofmedication">List of Medication</string>
+</resources>

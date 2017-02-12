@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <Button
+        android:text="View Patient Profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ViewPatient_button"
+        android:layout_weight="1.00" />
+
+    <Button
+        android:text="Create New Patient Profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/CreateNewPatientProfile_button"
+        android:layout_weight="1.00" />
+
+    <Button
+        android:text="Edit Patient Profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/EditPatientProfile_button"
+        android:layout_weight="1.00" />
+
+    <Button
+        android:text="Self Assessment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/SelfAssessment_button"
+        android:layout_weight="1.00" />
+
+    <Button
+        android:text="Self Diagnosis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/SelfDiagnosis_button"
+        android:layout_weight="1.00" />
+
+    <Button
+        android:text="Medication"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Medication_button"
+        android:layout_weight="1.01" />
+
+    <Button
+        android:text="Academic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Academic_button"
+        android:layout_weight="1.00" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:text="Home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Home_button"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Follow Up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/FollowUp_button"
+            android:textSize="13dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Reward"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Reward_button"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Patient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Patient_Button"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+</LinearLayout>
