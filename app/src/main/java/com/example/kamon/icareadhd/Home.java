@@ -23,6 +23,8 @@ public class Home extends Activity{
     SQLiteDatabase mDb2;
     Cursor mCursor2;
     ListView listTask;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

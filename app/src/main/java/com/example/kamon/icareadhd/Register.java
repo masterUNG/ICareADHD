@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
@@ -28,6 +29,10 @@ public class Register extends Activity {
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     private GoogleApiClient client;
+
+    private int intLanguage = 1;
+    private MyConstant myConstant;
+    private String[] userStrings,creatingStings,firstStrings,lastStrings,emailStrings,passStrings,doneStrings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +53,32 @@ public class Register extends Activity {
         final EditText editLName = (EditText) findViewById(R.id.edit_lname);
         final EditText editEMail = (EditText) findViewById(R.id.edit_email);
         final EditText editPass = (EditText) findViewById(R.id.edit_pass);
+        final TextView creating = (TextView) findViewById(R.id.Register_head);
+
+        //set up
+        myConstant = new MyConstant();
+        userStrings = myConstant.getUserTypeButtonRegister();
+        creatingStings = myConstant.getCreatingButtonRegister();
+        firstStrings = myConstant.getFirstNameButtonRegister();
+        lastStrings = myConstant.getLastNameButtonRegister();
+        emailStrings = myConstant.getEmailButtonRegister();
+        passStrings = myConstant.getPasswordButtonRegister();
+        doneStrings = myConstant.getDoneButtonRegister();
+        creatingStings = myConstant.getCreatingButtonRegister();
+
+        //show view
+        editUserType.setText(userStrings[intLanguage]);
+        editFName.setText(firstStrings[intLanguage]);
+        editLName.setText(lastStrings[intLanguage]);
+        editEMail.setText(emailStrings[intLanguage]);
+        editPass.setText(passStrings[intLanguage]);
+        creating.setText(creatingStings[intLanguage]);
+
 
         Button buttonDone = (Button) findViewById(R.id.Register_buttondone);
+
+        buttonDone.setText(doneStrings[intLanguage]);
+
         buttonDone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

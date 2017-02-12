@@ -10,20 +10,45 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
+
+    //explicit
     DatabaseUser mHelper;
     SQLiteDatabase mDb;
     Cursor mCursor;
+
+    private int intLanguage = 0;
+    private MyConstant myConstant;
+    private String[] emailStrings , passStrings, loginStrings,createStrings;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mHelper = new DatabaseUser(this);
+        //set up
+        myConstant = new MyConstant();
+        emailStrings = myConstant.getEmailButtonMain();
+        passStrings = myConstant.getPasswordButtonMain();
+        loginStrings = myConstant.getLoginButtonMain();
+        createStrings = myConstant.getCreateAccountButtonMain();
+
+
+                mHelper = new DatabaseUser(this);
         mDb = mHelper.getReadableDatabase();
         Button button = (Button)findViewById(R.id.login_buttoncreacc);
         Button button2 = (Button)findViewById(R.id.login_buttonlogin);
         final EditText Uname = (EditText) findViewById(R.id.login_uname);
         final EditText Password = (EditText) findViewById(R.id.login_password);
+
+        //show view
+        Uname.setText(emailStrings[intLanguage]);
+        Password.setText(passStrings[intLanguage]);
+        button.setText(createStrings[intLanguage]);
+        button2.setText(loginStrings[intLanguage]);
+
+
+
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
