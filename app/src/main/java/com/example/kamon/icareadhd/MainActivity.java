@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
     private void checkLanguage() {
 
         SQLiteDatabase sqLiteDatabase = openOrCreateDatabase(DatabaseUser.DB_NAME,
